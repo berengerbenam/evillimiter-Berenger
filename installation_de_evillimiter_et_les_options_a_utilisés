@@ -1,0 +1,25 @@
+git clone https://github.com/bitbrute/evillimiter.git
+cd evillimiter
+sudo python3 setup.py install
+
+################Les Options de evillimiter #####Fait##########par#################Berenger#######################################
+
+(Main) >>> help  #La console interactive est l’endroit où vous saisissez les commandes pour surveiller l’utilisation de la bande passante. Evillimiter offre une poignée de commandes pour faciliter le contrôle. Vous pouvez afficher une liste des commandes disponibles en entrant ? ou alors help dans la console interactive.
+(Main) >>> scan  #Vous devez analyser le réseau local avant de pouvoir surveiller les appareils connectés. Utilisez le scan commande de evillimiter pour le faire.
+(Main) >>> hosts #Cela recherchera tous les hôtes connectés à votre Wi-Fi et rapportera le nombre d’appareils actifs. Vous pouvez maintenant afficher les hôtes et limiter leur utilisation de la bande passante. Utilisez le hosts commande pour afficher tous les hôtes actifs.
+(Main) >>> limit 2 100kbit #Vous pouvez désormais limiter la bande passante d’un périphérique à l’aide de la commande limit.
+(Main) >>> limit 2,3 50kbit #Cette commande limite la bande passante du deuxième périphérique (ID=2) à 100 kilobits. Vous pouvez limiter plusieurs appareils à la fois en utilisant une liste séparée par des virgules.
+(Main) >>> limit 2 100kbit --download #La limitation de bande passante est définie pour les vitesses de téléchargement et de téléchargement. Mais vous pouvez également limiter les vitesses de chargement/téléchargement séparément. La commande suivante limite la vitesse de téléchargement du deuxième appareil à 100 kbit par seconde.
+(Main) >>> block 2 #Vous pouvez également bloquer la connexion Internet pour un périphérique hôte à l’aide de la commande block. De cette façon, vous pouvez contrôler les utilisateurs Wi-Fi directement depuis le terminal.
+(Main) >>> block 2 --download #Cette commande empêchera le deuxième appareil d’utiliser les ressources réseau. Utilisez le --upload et --download drapeaux pour bloquer le trafic à sens unique.
+(Main) >>> block all #Supposons que vous souhaitiez diffuser des sessions de jeu. Vous pouvez bloquer tous les autres appareils Wi-Fi à l’aide de la commande ci-dessous
+(Main) >>> free 1,2,3 #Jusqu’à présent, nous avons montré comment analyser, limiter et bloquer les périphériques à l’aide de evillimiter sous Linux. Cependant, n’oubliez pas de libérer ces appareils une fois que vous avez terminé. Utilisez la commande free suivie de l’ID d’hôte pour ce faire.
+(Main) >>> free all
+(Main) >>> quit #Pour quitter la console interactive, tapez quit ou exit dans la fenêtre de commande.
+sudo evillimiter --colorless #Ensuite, il y a deux autres fonctionnalités de evillimiter. Étant donné que la console interactive est colorée, elle peut ne pas fonctionner correctement dans certains environnements. Vous pouvez installer les packages nécessaires au codage couleur ou utiliser le --colorless option dans de tels cas.
+sudo evillimiter -f #Finalement, le -f L’option aide à résoudre les problèmes de configuration de Linux iptables ou de paramètres réseau.
+
+
+
+
+
